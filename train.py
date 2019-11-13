@@ -216,7 +216,7 @@ if __name__ == "__main__":
     parser.add_argument('--noise-mean', default=0., type=float, help='mean of Ornstein-Uhlenbeck noise')
     parser.add_argument('--noise-theta', default=0.15, type=float, help='theta parameter Ornstein-Uhlenbeck noise')
     parser.add_argument('--noise-sigma', default=0.12, type=float, help='sigma parameter of Ornstein-Uhlenbeck noise')
-    parser.add_argument('--grad-clip', default=1., type=float, help='gradient clipping')
+    parser.add_argument('--grad-clip', default=0., type=float, help='gradient clipping')
     args = parser.parse_args()
 
     main(args)
