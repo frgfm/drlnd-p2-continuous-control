@@ -58,7 +58,7 @@ def train_agent(agent, env, n_episodes=600, max_t=1000, success_thresh=30.):
         agent.reset()
         # initialize the score
         _scores = np.zeros(len(env_info.agents))
-        for t in range(max_t):
+        for _ in range(max_t):
             actions = agent.act(states, add_noise=True)
             # Perform action in the environment
             env_info = env.step(actions)[brain_name]

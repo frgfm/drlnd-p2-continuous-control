@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import random
 import copy
-from collections import namedtuple, deque
+from collections import deque
 
 from model import Actor, Critic
 
