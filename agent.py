@@ -61,8 +61,8 @@ class Agent():
             self.actor_scheduler = optim.lr_scheduler.StepLR(self.actor_optimizer, step_size=lr_steps, gamma=lr_gamma)
 
         # Critic Network (w/ Target Network)
-        self.critic_local = Critic(state_size, action_size).to(self.device)
         if self.train:
+            self.critic_local = Critic(state_size, action_size).to(self.device)
             self.critic_target = Critic(state_size, action_size).to(self.device)
             self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=lr, weight_decay=0.)
             self.critic_scheduler = optim.lr_scheduler.StepLR(self.critic_optimizer, step_size=lr_steps, gamma=lr_gamma)
