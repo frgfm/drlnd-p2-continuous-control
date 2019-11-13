@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
+import numpy as np
 import torch
 from pathlib import Path
 from unityagents import UnityEnvironment
